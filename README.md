@@ -17,24 +17,28 @@ A complete Petri net simulation and analysis environment written in Pharo Smallt
 ## Installation
 
 1. Clone this repository:
+
    ```bash
-   git clone https://github.com/yourname/petri-simulator.git
+   git clone https://github.com/iciiwhite/petri-simulator.git
 ```
 
 1. Open Pharo (version 8+ recommended).
+
 2. Drag all .st files from src/ into the Pharo image in order:
-   · Core/ first
-   · then Analysis/, IO/, Examples/
-   · then GUI/
-   · finally Tests/
+* Core/ first
+* then Analysis/, IO/, Examples/
+* then GUI/
+* finally Tests/
+
 3. (Optional) Run tests:
+
    ```smalltalk
    PetriNetTest suite run.
    SimulatorTest suite run.
    IOTest suite run.
    ```
 
-Quick Start
+## Quick Start
 
 ```smalltalk
 net := ExampleNets simpleNet.
@@ -43,7 +47,7 @@ editor loadNet: net.
 editor openInWorld.
 ```
 
-Or from code:
+## Or from code:
 
 ```smalltalk
 sim := PetriNetSimulator on: net.
@@ -52,33 +56,33 @@ sim start. "auto‑step"
 sim stop.
 ```
 
-GUI Usage
+## GUI Usage
 
-· Step – fire one random enabled transition.
-· Start – run simulation continuously.
-· Stop – pause auto‑step.
-· Reset – return all places to initial token counts.
-· Click a place with Shift to add a token, Ctrl to remove a token.
-· Click a transition to manually fire it (if enabled).
+* Step – fire one random enabled transition.
+* Start – run simulation continuously.
+* Stop – pause auto‑step.
+* Reset – return all places to initial token counts.
+* Click a place with Shift to add a token, Ctrl to remove a token.
+* Click a transition to manually fire it (if enabled).
 
-Export/Import
+## Export/Import
 
-Save a net to JSON:
+### Save a net to JSON:
 
 ```smalltalk
 PetriNetJsonExporter new export: net toFile: 'net.json'.
 ```
 
-Load from JSON:
+### Load from JSON:
 
 ```smalltalk
 importer := PetriNetJsonImporter new.
 net := importer importFromFile: 'net.json'.
 ```
 
-PNML (Petri Net Markup Language) is also supported.
+## PNML (Petri Net Markup Language) is also supported.
 
-Analysis
+### Analysis
 
 ```smalltalk
 checker := LivenessChecker on: net.
@@ -88,15 +92,18 @@ explorer explore.
 explorer reachableNodes. "collection of markings"
 ```
 
-Requirements
+## Requirements
 
-· Pharo 8 or later
-· No external dependencies (Morphic, STONJSON, XMLParser are built‑in)
+* Pharo 8 or later
+* No external dependencies (Morphic, STONJSON, XMLParser are built‑in)
 
-License
+# License
 
-MIT – do whatever you want.
+[MIT](license) – do whatever you want.
 
-Author
+## Author
 
-Your Name – built as a random language challenge.
+Icii White – built as a random language challenge.
+
+
+
