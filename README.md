@@ -19,12 +19,11 @@ A complete Petri net simulation and analysis environment written in Pharo Smallt
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/iciiwhite/petri-simulator.git
-```
+   git clone https://github.com/iciiwhite/petri-simulator.git```
 
-1. Open Pharo (version 8+ recommended).
+### 1. Open Pharo (version 8+ recommended).
 
-2. Drag all .st files from src/ into the Pharo image in order:
+### 2. Drag all `.st` files from src/ into the Pharo image in order:
 * Core/ first
 * then Analysis/, IO/, Examples/
 * then GUI/
